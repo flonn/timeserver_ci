@@ -17,5 +17,5 @@ Resources:
     Properties:
       Handler: index.handler
       CodeUri: app/
-      Runtime: nodejs4.3
+      Runtime: python2.7
       Policies: AWSLambdaBasicExecutionRole
