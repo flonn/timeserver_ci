@@ -19,6 +19,12 @@ app.get('/time', function(req, res) {
     });
 })
 
+app.get('/zeit', function(req, res) {
+    res.status(200).json({
+        "time": moment().tz("CST").format("dddd, MMMM Do YYYY, hh:mm:ss zz")
+    });
+})
+
 app.get('/time/:tz', function(req, res) {
     var timezone = req.params.tz
     var time = moment().format()
