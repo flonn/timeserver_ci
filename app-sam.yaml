@@ -15,7 +15,7 @@ Resources:
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: lambda_function.lambda_handler
       CodeUri: app/
       Runtime: python2.7
       Policies: AWSLambdaBasicExecutionRole
