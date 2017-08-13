@@ -19,16 +19,3 @@ Resources:
       CodeUri: app/
       Runtime: nodejs4.3
       Policies: AWSLambdaBasicExecutionRole
-      Events:
-        ApiEventSource:
-          Type: Api
-          Properties:
-            Path: /{proxy+}
-            Method: ANY
-
-Outputs:
-  ApiUrl:
-    Description: URL for application
-    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod'
-    Export:
-      Name: !Sub 'ApiUrl-${Stage}'
